@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+
+<body>
+    <!-- Thuộc phần head -->
+    <header>
+        <div class="headerDesktop">
+            <div class="topbar"></div>
+            <!-- Tiếp tục header -->
+            <div class="header">
+                <!-- Nãy có nói là gồm 1 dong2 (row) 
+                Logo chiếm 3 col
+    3 cái item chiếm 6 col
+    cái nút đặt lịch chiếm 2 col
+    nút tìm kiếm chiếm 1 col
+    Tổng cộng đủ 12 col
+    quên cho container vào
+    -->
+                <div class="container">
+                    <div class="row">
+                        <div class="logo col-3">
+                            <img src="image/LOGO.png" alt="">
+                        </div>
+                        <div class="itemCha col-6">
+                            <!-- 3 cái item là 3 div class item, vì nó giống nhau -->
+                            <div class="itemCon">
+                                <div class="image">
+                                    <!-- Em thêm cho cái img class cũng dc -->
+                                    <img src="image/hospital.png" alt="" class="icon">
+                                </div>
+                                <div class="content">
+                                    <p class="noiDungTren">Mở cửa từ 8h-16h</p>
+                                    <p class="noiDungDuoi">Từ T2-CN</p>
+                                </div>
+                            </div>
+                            <div class="itemCon">
+                                <div class="image">
+                                    <img src="image/hospital.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <p class="noiDungTren">Mở cửa từ 8h-16h</p>
+                                    <p class="noiDungDuoi">Từ T2-CN</p>
+                                </div>
+                            </div>
+                            <div class="itemCon">
+                                <div class="image">
+                                    <img src="image/hospital.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <p class="noiDungTren">Mở cửa từ 8h-16h</p>
+                                    <p class="noiDungDuoi">Từ T2-CN</p>
+                                </div>
+                            </div>
+                            <!-- 3 cái -->
+                        </div>
+                        <div class="datLich col-2">
+                            <a href="" class="btn btn-datLich" data-bs-toggle="modal" data-bs-target="#modalDatLich">Đặt
+                                lịch</a>
+                        </div>
+                        <div class="search col-1">
+                            <div class="iconSearch">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="modalDatLich" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Đặt lịch</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="sign">
+                                <div class="sign-box">
+                                    <form class="sign-up">
+                                        <div class="form-item">
+                                            <h4>Đặt lịch hẹn </h4>
+                                        </div>
+                                        <div class="form-item">
+                                            <input type="text" class="form-input" placeholder="Tên">
+                                        </div>
+                                        <div class="form-item">
+                                            <input type="text" class="form-input" placeholder="Số điện thoại">
+                                        </div>
+                                        <div class="form-item">
+                                            <input type="text" class="form-input" placeholder="Dịch vụ">
+                                        </div>
+                                        <div class="form-item">
+                                            <input type="text" class="form-input" placeholder="Lịch hẹn">
+                                        </div>
+                                        <div class="form-item">
+                                            <input type="text" class="form-input-ghichu" placeholder="Ghi chú">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Đặt lịch</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <!-- Tới menu  -->
+                <!-- Em thử làm coi, nãy bảo coi phần này rồi đúng không? :) -->
+                <!-- rồi làm tiếp đi, canh đều sử dụng flexbox -->
+                <div class="container">
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+                                </svg> TRANG CHỦ</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">GIỚI THIỆU </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">DỊCH VỤ</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">SẢN PHẨM</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">KIẾN THỨC</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">TIN TỨC</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">LIÊN HỆ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+     <div class="hederMobile">
+
+     </div>
+    </header>
+
+    <div class="mainSlider">
+        <img src="./image/Group 18.png" alt="group 18">
+        <img src="./image/Group 18.png" alt="group 18">
+        
+    </div>
+    <div class="About">
+        <!-- main gì? ghi rõ ra để mình biết  -->
+        <div class="container">
+            <div class="About-cha">
+                <p class="About-ND-tren">VỀ MẸ VÀ BÉ THÀNH TÂM
+                <p>
+                <div class="image">
+                    <img src="./image/Frame.png" alt="">
+                    <img src="./image/Frame (1).png" alt="">
+                    <img src="./image/Frame (2).png" alt="">
+                </div>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua</p>
+            </div>
+            <div class="About-con">
+                <div class="row">
+                    <div class="AnTam itemcon col-3 col-xs-6">
+                        <div class="image">
+                            <img src="./image/shield (1) 1.png" alt="" class="itemcon-img">
+                        </div>
+                        <div class="content">
+                            <p class="nd-tren">AN TÂM</p>
+                            <p class="nd-duoi">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua</p>
+                        </div>
+                    </div>
+                    <div class="AnToan-HieuQua itemcon col-3  col-sm-6">
+                        <div class="image">
+                            <img src="./image/safe 1.png" alt="" class="itemcon-img">
+                        </div>
+                        <div class="content">
+                            <p class="nd-tren">AN TOÀN-HIỆU QUẢ</p>
+                            <p class="nd-duoi">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua</p>
+                        </div>
+                    </div>
+                    <div class="ChuyenNgiep itemcon col-3 col-sm-6">
+                        <div class="image">
+                            <img src="./image/businessman 1.png" alt="" class="itemcon-img">
+                        </div>
+                        <div class="content">
+                            <p class="nd-tren">CHUYÊN NGHIỆP</p>
+                            <p class="nd-duoi">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua</p>
+                        </div>
+                    </div>
+                    <div class="TinCay itemcon col-3 col-xs-6s">
+                        <div class="image">
+                            <img src="./image/trust 1.png" alt="" class="itemcon-img">
+                        </div>
+                        <div class="content">
+                            <p class="nd-tren">TIN CẬY</p>
+                            <p class="nd-duoi">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="DichVu">
+        <div class="container">
+            <div class="DichVu-cha">
+                <p class="nd-tren">DỊCH VỤ MẸ VÀ BÉ THÀNH TÂM</p>
+                <div class="nd-mid img">
+                    <img src="./image/Frame.png" alt="">
+                    <img src="./image/Frame (1).png" alt="">
+                    <img src="./image/Frame (2).png" alt="">
+                </div>
+                <p class="nd-duoi">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. </p>
+            </div>
+            <div class="DichVu-con">
+                <div class="row">
+                    <div class="list-item itemcon col-4">
+                        <div class="nd-tren image">
+                            <img src="./image/dichvuimg/Rectangle 2.png" alt="">
+                        </div>
+                        <p class="nd-duoi">DỊCH VỤ CHO BÉ</p>
+                    </div>
+                    <div class="list-item itemcon col-4">
+                        <div class="nd-tren image">
+                            <img src="./image/dichvuimg/Rectangle 2 (1).png" alt="">
+                        </div>
+                        <p class="nd-duoi">DỊCH VỤ CHO MẸ BẦU</p>
+                    </div>
+                    <div class="list-item itemcon col-4">
+                        <div class="nd-tren image">
+                            <img src="./image/dichvuimg/Rectangle 2 (2).png" alt="">
+                        </div>
+                        <p class="nd-duoi">DỊCH VỤ CHO MẸ SAU SINH</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nhanvien">
+        <div class="container">
+            <!-- 1 row -->
+            <div class="nhanvien__dangky row">
+                <!-- cột col  -->
+                <div class="nhanvienDV1 col-7">
+                    <div class="ketoan">
+                        <div class="img">
+                            <img src="./image/dichvuimg/Rectangle 21.png" alt="">
+                            <div class="ten_nv">
+                                <p class="ten_nv-nv">Tuyết Thanh</p>
+                                <p class="chucvu_nv">(Kế toán)</p>
+                            </div>
+                        </div>
+                        <p class="gioithieu">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fringilla
+                            ultrices purus vel egestas. Phasellus elementum urna imperdiet erat aliquet sollicitudin. In
+                            hac habitasse platea dictumst. </p>
+                    </div>
+                    <div class="ketoan">
+                        <div class="img">
+                            <img src="./image/dichvuimg/Rectangle 21.png" alt="">
+                            <div class="ten_nv">
+                                <p class="ten_nv-nv">Tuyết Thanh</p>
+                                <p class="chucvu_nv">(Kế toán)</p>
+                            </div>
+                        </div>
+                        <p class="gioithieu">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fringilla
+                            ultrices purus vel egestas. Phasellus elementum urna imperdiet erat aliquet sollicitudin. In
+                            hac habitasse platea dictumst. </p>
+                    </div>
+                    <div class="ketoan">
+                        <div class="img">
+                            <img src="./image/dichvuimg/Rectangle 21.png" alt="">
+                            <div class="ten_nv">
+                                <p class="ten_nv-nv">Tuyết Thanh</p>
+                                <p class="chucvu_nv">(Kế toán)</p>
+                            </div>
+                        </div>
+                        <p class="gioithieu">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fringilla
+                            ultrices purus vel egestas. Phasellus elementum urna imperdiet erat aliquet sollicitudin. In
+                            hac habitasse platea dictumst. </p>
+                    </div>
+                    <div class="ketoan">
+                        <div class="img">
+                            <img src="./image/dichvuimg/Rectangle 21.png" alt="">
+                            <div class="ten_nv">
+                                <p class="ten_nv-nv">Tuyết Thanh</p>
+                                <p class="chucvu_nv">(Kế toán)</p>
+                            </div>
+                        </div>
+                        <p class="gioithieu">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fringilla
+                            ultrices purus vel egestas. Phasellus elementum urna imperdiet erat aliquet sollicitudin. In
+                            hac habitasse platea dictumst. </p>
+                    </div>
+                </div>
+                <!-- cột col  -->
+                <div class="sign col-5">
+                    <div class="sign-box">
+                        <form class="sign-up">
+                            <div class="form-item">
+                                <h4>Đăng ký tư vấn</h4>
+                            </div>
+                            <div class="form-item">
+                                <input type="text" class="form-input" placeholder="Tên">
+                            </div>
+                            <div class="form-item">
+                                <input type="text" class="form-input" placeholder="Số điện thoại">
+                            </div>
+                            <div class="form-item">
+                                <input type="text" class="form-input" placeholder="Dịch vụ">
+                            </div>
+                            <div class="form-item">
+                                <input type="text" class="form-input" placeholder="Lịch hẹn">
+                            </div>
+                            <div class="form-item">
+                                <input type="text" class="form-input-ghichu" placeholder="Ghi chú">
+                            </div>
+                            <div class="form-item">
+                                <input type="button" class="form-input-button" value="ĐĂNG KÝ NGAY">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sanpham">
+        <div class="container">
+            <div class="sanpham-head">
+                <div class="sp-head-tieude">SẢN PHẨM CỦA CHÚNG TÔI</div>
+                <div class="sp-head-tieude-img img">
+                    <img src="./image/Frame.png" alt="">
+                    <img src="./image/Frame (1).png" alt="">
+                    <img src="./image/Frame (2).png" alt="">
+                </div>
+                <div class="sp-head-list">
+                    <p class="sanpham-list">Dược liệu</p>
+                    <p class="sanpham-list">Ăn vặt dinh dưỡng</p>
+                    <p class="sanpham-list">Dụng cụ</p>
+                </div>
+            </div>
+            <div class="sanpham-ds grids-container">
+                <div class="sp-list-item grid">
+                    <div class="sp-list-item-img">
+                        <div class="giamgia">
+                            <p>-10%</p>
+                            <p>Hot</p>
+                        </div>
+                        <img src="./image/Ảnh SP.png" alt="">
+                    </div>
+                    <div class="sp-list-item-about">
+                        <div class="sp-item-head">
+                            <p>Tiêu đề sản phẩm được ghi ở đây</p>
+                        </div>
+                        <div class="sp-item-giatien">
+                            <p>5.000.000đ</p>
+                            <p1>5.000.000đ</p1>
+                        </div>
+                        <div class="sp-item-like">
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                        </div>
+                        <div class="sp-item-muaxem">
+                            <div class="sp-item-muaxem-num cart">
+                                <p>Lượt mua:80</p>
+                            </div>
+                            <div class="sp-item-muaxem-num eye">
+                                <p>Lượt xem:100</p>
+                            </div>
+                        </div>
+                        <div class="sp-item-button">
+                            <input type="button" value="Mua ngay" class="sp-item-button-bd">
+                        </div>
+                    </div>
+                </div>
+                <div class="sp-list-item grid">
+                    <div class="sp-list-item-img">
+                        <div class="giamgia">
+                            <p>-10%</p>
+                            <p>Hot</p>
+                        </div>
+                        <img src="./image/anhsanpham/Ảnh SP (1).png" alt="">
+                    </div>
+                    <div class="sp-list-item-about">
+                        <div class="sp-item-head">
+                            <p>Tiêu đề sản phẩm được ghi ở đây</p>
+                        </div>
+                        <div class="sp-item-giatien">
+                            <p>5.000.000đ</p>
+                            <p1>5.000.000đ</p1>
+                        </div>
+                        <div class="sp-item-like">
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                        </div>
+                        <div class="sp-item-muaxem">
+                            <div class="sp-item-muaxem-num cart">
+                                <p>Lượt mua:80</p>
+                            </div>
+                            <div class="sp-item-muaxem-num eye">
+                                <p>Lượt xem:100</p>
+                            </div>
+                        </div>
+                        <div class="sp-item-button">
+                            <input type="button" value="Mua ngay" class="sp-item-button-bd">
+                        </div>
+                    </div>
+                </div>
+                <div class="sp-list-item grid">
+                    <div class="sp-list-item-img">
+                        <div class="giamgia">
+                            <p>-10%</p>
+                            <p>Hot</p>
+                        </div>
+                        <img src="./image/anhsanpham/Ảnh SP (2).png" alt="">
+                    </div>
+                    <div class="sp-list-item-about">
+                        <div class="sp-item-head">
+                            <p>Tiêu đề sản phẩm được ghi ở đây</p>
+                        </div>
+                        <div class="sp-item-giatien">
+                            <p>5.000.000đ</p>
+                            <p1>5.000.000đ</p1>
+                        </div>
+                        <div class="sp-item-like">
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                        </div>
+                        <div class="sp-item-muaxem">
+                            <div class="sp-item-muaxem-num cart">
+                                <p>Lượt mua:80</p>
+                            </div>
+                            <div class="sp-item-muaxem-num eye">
+                                <p>Lượt xem:100</p>
+                            </div>
+                        </div>
+                        <div class="sp-item-button">
+                            <input type="button" value="Mua ngay" class="sp-item-button-bd">
+                        </div>
+                    </div>
+                </div>
+                <div class="sp-list-item grid">
+                    <div class="sp-list-item-img">
+                        <div class="giamgia">
+                            <p>-10%</p>
+                            <p>Hot</p>
+                        </div>
+                        <img src="./image/anhsanpham/Ảnh SP (3).png" alt="">
+                    </div>
+                    <div class="sp-list-item-about">
+                        <div class="sp-item-head">
+                            <p>Tiêu đề sản phẩm được ghi ở đây</p>
+                        </div>
+                        <div class="sp-item-giatien">
+                            <p>5.000.000đ</p>
+                            <p1>5.000.000đ</p1>
+                        </div>
+                        <div class="sp-item-like">
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                        </div>
+                        <div class="sp-item-muaxem">
+                            <div class="sp-item-muaxem-num cart">
+                                <p>Lượt mua:80</p>
+                            </div>
+                            <div class="sp-item-muaxem-num eye">
+                                <p>Lượt xem:100</p>
+                            </div>
+                        </div>
+                        <div class="sp-item-button">
+                            <input type="button" value="Mua ngay" class="sp-item-button-bd">
+                        </div>
+                    </div>
+                </div>
+                <div class="sp-list-item grid">
+                    <div class="sp-list-item-img">
+                        <div class="giamgia">
+                            <p>-10%</p>
+                            <p>Hot</p>
+                        </div>
+                        <img src="./image/anhsanpham/Ảnh SP (4).png" alt="">
+                    </div>
+                    <div class="sp-list-item-about">
+                        <div class="sp-item-head">
+                            <p>Tiêu đề sản phẩm được ghi ở đây</p>
+                        </div>
+                        <div class="sp-item-giatien">
+                            <p>5.000.000đ</p>
+                            <p1>5.000.000đ</p1>
+                        </div>
+                        <div class="sp-item-like">
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                        </div>
+                        <div class="sp-item-muaxem">
+                            <div class="sp-item-muaxem-num cart">
+                                <p>Lượt mua:80</p>
+                            </div>
+                            <div class="sp-item-muaxem-num eye">
+                                <p>Lượt xem:100</p>
+                            </div>
+                        </div>
+                        <div class="sp-item-button">
+                            <input type="button" value="Mua ngay" class="sp-item-button-bd">
+                        </div>
+                    </div>
+                </div>
+                <div class="sp-list-item grid">
+                    <div class="sp-list-item-img">
+                        <div class="giamgia">
+                            <p>-10%</p>
+                            <p>Hot</p>
+                        </div>
+                        <img src="./image/anhsanpham/Ảnh SP (5).png" alt="">
+                    </div>
+                    <div class="sp-list-item-about">
+                        <div class="sp-item-head">
+                            <p>Tiêu đề sản phẩm được ghi ở đây</p>
+                        </div>
+                        <div class="sp-item-giatien">
+                            <p>5.000.000đ</p>
+                            <p1>5.000.000đ</p1>
+                        </div>
+                        <div class="sp-item-like">
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                        </div>
+                        <div class="sp-item-muaxem">
+                            <div class="sp-item-muaxem-num cart">
+                                <p>Lượt mua:80</p>
+                            </div>
+                            <div class="sp-item-muaxem-num eye">
+                                <p>Lượt xem:100</p>
+                            </div>
+                        </div>
+                        <div class="sp-item-button">
+                            <input type="button" value="Mua ngay" class="sp-item-button-bd">
+                        </div>
+                    </div>
+                </div>
+                <div class="sp-list-item grid">
+                    <div class="sp-list-item-img">
+                        <div class="giamgia">
+                            <p>-10%</p>
+                            <p>Hot</p>
+                        </div>
+                        <img src="./image/anhsanpham/Ảnh SP (6).png" alt="">
+                    </div>
+                    <div class="sp-list-item-about">
+                        <div class="sp-item-head">
+                            <p>Tiêu đề sản phẩm được ghi ở đây</p>
+                        </div>
+                        <div class="sp-item-giatien">
+                            <p>5.000.000đ</p>
+                            <p1>5.000.000đ</p1>
+                        </div>
+                        <div class="sp-item-like">
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                        </div>
+                        <div class="sp-item-muaxem">
+                            <div class="sp-item-muaxem-num cart">
+                                <p>Lượt mua:80</p>
+                            </div>
+                            <div class="sp-item-muaxem-num eye">
+                                <p>Lượt xem:100</p>
+                            </div>
+                        </div>
+                        <div class="sp-item-button">
+                            <input type="button" value="Mua ngay" class="sp-item-button-bd">
+                        </div>
+                    </div>
+                </div>
+                <div class="sp-list-item grid">
+                    <div class="sp-list-item-img">
+                        <div class="giamgia">
+                            <p>-10%</p>
+                            <p>Hot</p>
+                        </div>
+                        <img src="./image/anhsanpham/Ảnh SP (7).png" alt="">
+                    </div>
+                    <div class="sp-list-item-about">
+                        <div class="sp-item-head">
+                            <p>Tiêu đề sản phẩm được ghi ở đây</p>
+                        </div>
+                        <div class="sp-item-giatien">
+                            <p>5.000.000đ</p>
+                            <p1>5.000.000đ</p1>
+                        </div>
+                        <div class="sp-item-like">
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                        </div>
+                        <div class="sp-item-muaxem">
+                            <div class="sp-item-muaxem-num cart">
+                                <p>Lượt mua:80</p>
+                            </div>
+                            <div class="sp-item-muaxem-num eye">
+                                <p>Lượt xem:100</p>
+                            </div>
+                        </div>
+                        <div class="sp-item-button">
+                            <input type="button" value="Mua ngay" class="sp-item-button-bd">
+                        </div>
+                    </div>
+                </div>
+                <div class="sp-list-item grid">
+                    <div class="sp-list-item-img">
+                        <div class="giamgia">
+                            <p>-10%</p>
+                            <p>Hot</p>
+                        </div>
+                        <img src="./image/anhsanpham/Ảnh SP (8).png" alt="">
+                    </div>
+                    <div class="sp-list-item-about">
+                        <div class="sp-item-head">
+                            <p>Tiêu đề sản phẩm được ghi ở đây</p>
+                        </div>
+                        <div class="sp-item-giatien">
+                            <p>5.000.000đ</p>
+                            <p1>5.000.000đ</p1>
+                        </div>
+                        <div class="sp-item-like">
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                        </div>
+                        <div class="sp-item-muaxem">
+                            <div class="sp-item-muaxem-num cart">
+                                <p>Lượt mua:80</p>
+                            </div>
+                            <div class="sp-item-muaxem-num eye">
+                                <p>Lượt xem:100</p>
+                            </div>
+                        </div>
+                        <div class="sp-item-button">
+                            <input type="button" value="Mua ngay" class="sp-item-button-bd">
+                        </div>
+                    </div>
+                </div>
+                <div class="sp-list-item grid">
+                    <div class="sp-list-item-img">
+                        <div class="giamgia">
+                            <p>-10%</p>
+                            <p>Hot</p>
+                        </div>
+                        <img src="./image/anhsanpham/Ảnh SP (9).png" alt="">
+                    </div>
+                    <div class="sp-list-item-about">
+                        <div class="sp-item-head">
+                            <p>Tiêu đề sản phẩm được ghi ở đây</p>
+                        </div>
+                        <div class="sp-item-giatien">
+                            <p>5.000.000đ</p>
+                            <p1>5.000.000đ</p1>
+                        </div>
+                        <div class="sp-item-like">
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                        </div>
+                        <div class="sp-item-muaxem">
+                            <div class="sp-item-muaxem-num cart">
+                                <p>Lượt mua:80</p>
+                            </div>
+                            <div class="sp-item-muaxem-num eye">
+                                <p>Lượt xem:100</p>
+                            </div>
+                        </div>
+                        <div class="sp-item-button">
+                            <input type="button" value="Mua ngay" class="sp-item-button-bd">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="camnhankh">
+                <div class="container">
+                    <div class="row" style="lign-items: start !important;">
+                        <div class="cauhoi col-6">
+                            <span class="cauhoi-tieude">
+
+                                <h3>CÂU HỎI THƯỜNG GẶP</h3>
+                                <i></i>
+                            </span>
+                            <div class="caccauhoi">
+                                <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-1" role="button"
+                                    aria-expanded="false" aria-controls="cauHoi-1">
+                                    Lưu ý khi mua hàng ở cửa hàng như thế nào ?
+                                </a>
+                                <div class="collapse" id="cauHoi-1">
+                                    <div class="card card-body">
+                                        Khong biet
+                                    </div>
+                                </div>
+                                <p>
+
+                                    <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-2" role="button"
+                                        aria-expanded="false" aria-controls="cauHoi-1">
+                                        Cửa hàng có những dịch vụ nào, có phụ thu không ?
+                                    </a>
+                                <div class="collapse" id="cauHoi-2">
+                                    <div class="card card-body">
+                                        Khong biet
+                                    </div>
+                                </div>
+                                </p>
+
+                                <p>
+
+                                    <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-3" role="button"
+                                        aria-expanded="false" aria-controls="cauHoi-1">
+                                        Lưu ý khi mua hàng ở cửa hàng như thế nào ?
+                                    </a>
+                                <div class="collapse" id="cauHoi-3">
+                                    <div class="card card-body">
+                                        Khong biet
+                                    </div>
+                                </div>
+                                </p>
+
+                                <p>
+
+                                    <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-4" role="button"
+                                        aria-expanded="false" aria-controls="cauHoi-1">
+                                        Cửa hàng có những dịch vụ nào ?
+                                    </a>
+                                <div class="collapse" id="cauHoi-4">
+                                    <div class="card card-body">
+                                        Khong biet
+                                    </div>
+                                </div>
+                                </p>
+
+                                <p>
+
+                                    <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-5" role="button"
+                                        aria-expanded="false" aria-controls="cauHoi-1">
+                                        Lưu ý khi mua hàng ở cửa hàng như thế nào ?
+                                    </a>
+                                <div class="collapse" id="cauHoi-5">
+                                    <div class="card card-body">
+                                        Khong biet
+                                    </div>
+                                </div>
+                                </p>
+
+                                <p>
+
+                                    <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-6" role="button"
+                                        aria-expanded="false" aria-controls="cauHoi-1">
+                                        tai sao duyen lai khoc
+                                    </a>
+                                <div class="collapse" id="cauHoi-6">
+                                    <div class="card card-body">
+                                        boi vi bi thang quang danh
+                                    </div>
+                                </div>
+                                </p>
+
+                                <p>
+
+                                    <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-7" role="button"
+                                        aria-expanded="false" aria-controls="cauHoi-1">
+                                        Cửa hàng có những dịch vụ nào ?
+                                    </a>
+                                <div class="collapse" id="cauHoi-7">
+                                    <div class="card card-body">
+                                        toi lam gi biet di hoi nguoi khac dum cai
+                                    </div>
+                                </div>
+                                </p>
+
+
+
+
+
+
+                                <!--  -->
+
+
+
+                            </div>
+                        </div>
+                        <div class="camnhan col-6">
+                            <span class="camnhan-tieude">
+
+                                <H3>CẢM NHẬN KHÁCH HÀNG</H3>
+                                <i></i>
+                            </span>
+                            <div class="nguoifull row">
+                                <!-- Không có row sao chia cột được -->
+                                <div class="nguoi col-6">
+                                    <div class="nguoi-img">
+                                        <img src="./image/anhsanpham/Ellipse 5.png" alt="">
+                                    </div>
+                                    <div class="nguoi-ten">
+                                        <p>Quan Nguyen</p>
+                                    </div>
+                                    <div class="nguoi-gioithieu">
+
+                                        <p class="item-kh">Lorem Ipsum has been the industry's standard dummy text ever
+                                            since the 1500s, when an unknown printer took a galley of type and scrambled
+                                            specimen book.</p>
+                                    </div>
+
+                                </div>
+                                <div class="nguoi col-6">
+                                    <div class="nguoi-img">
+                                        <img src="./image/anhsanpham/Ellipse 5.png" alt="">
+                                    </div>
+                                    <div class="nguoi-ten">
+                                        <p>Quan Nguyen</p>
+                                    </div>
+                                    <div class="nguoi-gioithieu">
+
+                                        <p class="item-kh">Lorem Ipsum has been the industry's standard dummy text ever
+                                            since the 1500s, when an unknown printer took a galley of type and scrambled
+                                            specimen book.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="album">
+        <div class="container">
+            <div class="album-tieude">
+                <div class="album-tieude-h"> ALBUM ẢNH </div>
+                <div class="album-tieude-img">
+                    <img src="./image/Frame.png" alt="">
+                    <img src="./image/Frame (1).png" alt="">
+                    <img src="./image/Frame (2).png" alt="">
+                </div>
+                <div class="album-tieude-con">
+                    <div class="album-tieude-con-kh">
+                        <p>Khách Hàng</p>
+                    </div>
+                    <div class="album-tieude-con-kh">
+                        <p>Không gian</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="album-hinhembe grids">
+                <div class="img grid-con">
+
+                    <img src="./image/hinhembe/Rectangle 41.png" alt="">
+                </div>
+
+                <div class="img grid-con">
+
+                    <img src="./image/hinhembe/Rectangle 41 (1).png" alt="">
+                </div>
+
+                <div class="img grid-con">
+
+                    <img src="./image/hinhembe/Rectangle 42.png" alt="">
+                </div>
+
+                <div class="img grid-con">
+
+                    <img src="./image/hinhembe/Rectangle 42 (1).png" alt="">
+                </div>
+
+                <div class="img grid-con">
+
+                    <img src="./image/hinhembe/Rectangle 43.png" alt="">
+                </div>
+
+                <div class="img grid-con">
+
+                    <img src="./image/hinhembe/Rectangle 43 (1).png" alt="">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="blog">
+        <div class="container">
+            <div class="blog-head">
+                <div class="blog-head-h">BLOG KINH NGHIỆM</div>
+                <div class="blog-head-img">
+                    <img src="./image/Frame.png" alt="">
+                    <img src="./image/Frame (1).png" alt="">
+                    <img src="./image/Frame (2).png" alt="">
+                </div>
+
+            </div>
+            <div class="blog-list-img grid">
+                <div class="blog-list-img-tintuc">
+                    <div class="blog-list-img-tintuc_img">
+                        <img src="./image/hinhembe/Rectangle 43 (2).png" alt="">
+                    </div>
+                    <div class="blog-list-img-tintuc_nd">
+                        <div class="blog-list-img-tintuc_nd_td">
+                            <div class="blog-list-img-tintuc_nd_td_td">Tiêu đề tin tức được ghi ở đây</div>
+                            <div class="blog-list-img-tintuc_nd_td_time">15/05/2023</div>
+                        </div>
+                        <div class="blog-list-img-tintuc_nd_nd">
+                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-list-img-tintuc">
+                    <div class="blog-list-img-tintuc_img">
+                        <img src="./image/hinhembe/Rectangle 43 (3).png" alt="">
+                    </div>
+                    <div class="blog-list-img-tintuc_nd">
+                        <div class="blog-list-img-tintuc_nd_td">
+                            <div class="blog-list-img-tintuc_nd_td_td">Tiêu đề tin tức được ghi ở đây</div>
+                            <div class="blog-list-img-tintuc_nd_td_time">15/05/2023</div>
+                        </div>
+                        <div class="blog-list-img-tintuc_nd_nd">
+                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-list-img-tintuc">
+                    <div class="blog-list-img-tintuc_img">
+                        <img src="./image/hinhembe/Rectangle 43 (4).png" alt="">
+                    </div>
+                    <div class="blog-list-img-tintuc_nd">
+                        <div class="blog-list-img-tintuc_nd_td">
+                            <div class="blog-list-img-tintuc_nd_td_td">Tiêu đề tin tức được ghi ở đây</div>
+                            <div class="blog-list-img-tintuc_nd_td_time">15/05/2023</div>
+                        </div>
+                        <div class="blog-list-img-tintuc_nd_nd">
+                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-nd col-3">
+                        <div class="mevabe">
+                            <div class="mevabe-td item-td">MẸ VÀ BÉ THÀNH TÂM</div>
+                            <div class="mevabe-nd item-nd">
+                                <P><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                  </svg> Địa chỉ : 25 đường NIle, Phước Long B, Quận 9, TP. HCM </P>
+                                <P><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                                  </svg> Hotline: 0961828084 </P>
+                                <P><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                                  </svg> Email: mevabethanhtam@gmail.com</P>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="footer-nd col-3">
+                        <div class="chinhsach">
+                            <div class="chinhsach-td item-td">CHÍNH SÁCH</div>
+                            <div class="chinhsach-nd item-nd">
+                                <p> Đại lý</p>
+                                <p> Giỏ hàng</p>
+                                <p> Thanh toán</p>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="footer-nd col-3">
+                        <div class="map">
+                            <div class="bando item-td">BẢN ĐỒ</div>
+                            <div class="bando-img">
+                                <img src="./image/footer/Rectangle 3.png" alt="">
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="footer-nd col-3">
+                        <div class="fanpage ">
+                            <div class="fanpage-td item-td">FANPAGE</div>
+                            <div class="fanpage-img">
+                                <img src="./image/footer/Rectangle 3 (1).png" alt="">
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+       
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2022 - Thiết kế bởi Thiên Duyên</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="style/script.js"></script>
+    </body>
+
+</html>

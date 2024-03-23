@@ -1,0 +1,698 @@
+/* Tạo class */
+/* Ở đây cha là header không phải class, topbar là class thì chấm . */
+/* Giờ chị cho xem bố cục của header */
+:root {
+
+    --hong-tone: #CD1877;
+    --hong-nhat: #f2dce9;
+    --xam-nhat: #DFD9C3;
+    --mau-den: #252525;
+    --xam-chunho: #969595;
+    --bo-vien :#DFD9C3;
+
+
+}
+
+html p {
+    margin: 0;
+}
+
+header .row {
+    align-items: center;
+}
+
+header .topbar {
+    height: 30px;
+    background-image: url('image/top-bar.png');
+    background-repeat: no-repeat;
+    /* này là không cho nó lặp lại */
+    /* Giờ cho nó căn giữa */
+    background-position: center;
+    /* Tham khảo https://www.w3schools.com/css/css_background.asp */
+}
+
+header .header {
+    /* height: 30px; */
+    /* background-color: #12bd21; */
+    /*      Trên phải dưới trái */
+    /* padding: 20px 0 20px 0;  */
+    /* Có thể viết tắt thế này, vì trên dưới bằng nhau */
+    padding: 20px 0;
+}
+
+header .navbar {
+    height: 50px;
+    background-color: #DFD9C3;
+}
+
+header .itemCha {
+    display: flex;
+    justify-content: space-between;
+    /* này là căn đều */
+    /* Tham khảo https://viblo.asia/p/css-flexible-box-flexbox-day-du-nhat-Ljy5VDWoZra */
+}
+
+/* Do các item sử dụng class giống nhau, nên kế thừa */
+header .itemCha .itemCon {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* gap: 5px; */
+    /* này là khoảng cách giữa các ô */
+    align-items: center;
+    /* cho các item căn giữa */
+}
+
+/* Cho cái chiều cao cố định vào cái hình item, tại vì nhiều khi các hình không bằng nhau, nó lởm chởm thì xấu */
+header .itemCha .itemCon .icon {
+    height: 36px;
+}
+
+/* Do mình muốn chỉnh các thẻ p trong .itemCon */
+header .itemCha .itemCon p {
+    margin: 0;
+}
+
+header .itemCha .itemCon p.noiDungTren {
+    font-size: 13px;
+}
+
+header .itemCha .itemCon p.noiDungDuoi {
+    font-weight: 600;
+}
+
+header .datLich .btn-datLich {
+    background-color: #CD1877;
+    color: #fff;
+    width: 100%;
+    border-radius: 30px;
+    /* bo tròn */
+    /* https://www.w3schools.com/css/css_border_rounded.asp */
+}
+
+header .iconSearch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #b3b3b3;
+    /* viền */
+    border-radius: 50%;
+    /* bo tròn */
+}
+
+header .navbar .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+
+}
+
+
+header .navbar a {
+    color: #000000;
+    font-weight: 500;
+    text-decoration: none;
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+    .headerDesktop{
+        display: none;
+    }
+ }
+
+.mainSlider,
+.About,
+.DichVu,
+.nhanvien,.sanpham,.album,.blog{
+    overflow: hidden;
+}
+
+
+.mainSlider .container{
+    background-size: contain;
+    background-position: 0;
+    width: 100%;
+    
+}
+
+.About {
+    margin-top: 50px;
+    color: var(--xam-chunho);
+    text-align: center;
+
+
+}
+.About div.img{
+    margin-top: 15px;
+}
+
+.About .About-cha {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 50px;
+}
+
+.About .About-cha p {
+    margin: 0;
+}
+
+.About .About-cha .About-ND-tren {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--hong-tone);
+}
+
+
+
+.About .About-con .itemcon .nd-tren {
+    color: var(--mau-den);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+}
+
+.About .About-con .itemcon .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.DichVu {
+    margin: 50px;
+}
+
+.DichVu .DichVu-cha {
+    color: var(--xam-chunho);
+    margin: 20px;
+
+
+
+}
+
+
+.DichVu .nd-tren {
+    color: var(--hong-tone);
+    font-weight: 600;
+    font-size: 30px;
+    
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+ .DichVu .nd-mid{
+    margin: 30px 0;
+
+}
+
+ .DichVu .nd-duoi{
+    margin-bottom: 12px;
+} 
+
+/* .DichVu .nd-tren,
+.DichVu .nd-mid,
+.DichVu .nd-duoi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* Làm sao mấy cái này giống nhau có thể ghi như này được nè
+thắc mắc gì nữa không? 
+
+ủa tưởng set cho cái thằng dichvu ở tren dau thuoc tinh chung dc
+chung cái g
+
+dc
+thử xem
+*/
+.DichVu-cha {
+    /* display: flex; */
+    /* cái flex này nó ép qua hết bên trái, nên không sử dụng được */
+    /* align-items: center;
+    justify-content: center; */
+    text-align: center;
+    margin: 12px 0;
+    /* dùng cái này thì được */
+    /* oke làm mò nãy h thôi về đi mai chỉ tiếp
+    ok */
+}
+
+.DichVu-con {
+    text-align: center;
+    font-weight: 600;
+    color: var(--mau-den);
+}
+.DichVu-con .image img{
+    width: 100% ;
+}
+.DichVu-con .nd-duoi{
+    border: 1px solid var(--bo-vien);
+    padding: 20px 0;
+
+}
+.nhanvien {
+    margin: 10px 0px;
+}
+
+.nhanvien .container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.nhanvien .nhanvien__dangky {
+
+    width: 100;
+    display: flex;
+
+
+}
+
+.nhanvien .nhanvien__dangky .nhanvienDV1
+{
+    /* padding: 20px; */
+    /* Chia lưới */
+    display: grid;
+    /* Chia cột, ở đây chia 2 cột tỉ lệ 1:1 bằng nhau */
+    grid-template-columns: 1fr 1fr;
+    /* Khoảng cách giữa các cột  */
+    gap: 15px;
+
+    /* Tham khảo https://www.w3schools.com/css/css_grid.asp */
+
+}
+
+.nhanvien .nhanvien__dangky .nhanvienDV2,
+.ketoan {
+    padding: 20px 0 5px;
+}
+
+.nhanvien .nhanvien__dangky .nhanvienDV1 .ketoan .img .ten_nv .ten_nv-nv{
+    font-weight: bold;
+}
+.nhanvien .nhanvien__dangky .nhanvienDV1 .ketoan .img .ten_nv{
+    margin-left: 12px;
+}
+
+.nhanvien .nhanvien__dangky .nhanvienDV1 .ketoan .img {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.nhanvien .nhanvien__dangky .nhanvienDV2 .ketoan .img {
+    display: flex;
+}
+
+/* .nhanvien .container{
+        border: 2px solid #333;
+    } */
+
+
+
+.sign .sign-up {
+    padding: 40px;
+    height: 460px;
+    width: 100%;
+    text-align: center;
+}
+
+.sign .sign-up h4 {
+    text-align: center;
+    padding: 20px 0px;
+    font-weight: 600;
+    color: var(--hong-tone);
+}
+
+.sign .sign-box {
+    border: 1px solid var(--xam-nhat);
+    border-radius: 10px;
+
+}
+
+.sign .sign-up .form-item {
+    border-radius: 5px;
+    padding-left: auto;
+    width: 100%;
+    border: none;
+    min-height: 50px;
+}
+
+.sign .sign-up .form-item .form-input {
+    height: auto;
+    width: 100%;
+    min-height: 40px;
+    border: none;
+    border: 1px solid var(--bo-vien);
+}
+
+.sign .sign-up .form-item .form-input-ghichu {
+    height: auto;
+    width: 100%;
+    min-height: 80px;
+    border: 1px solid var(--bo-vien);
+}
+
+.sign .sign-up .form-item .form-input-button {
+    padding: 0 20px;
+    background-color: yellowgreen;
+    margin: 20px;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+}
+
+.sanpham {
+    text-align: center;
+    color: #000000;
+    margin: 50px 0px;
+}
+
+.sanpham .sanpham-head .img{
+    margin: 30px 0;
+}
+
+.sanpham .sanpham-head .sp-head-tieude {
+    color: var(--hong-tone);
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.sanpham .sanpham-head .sp-head-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sanpham .sanpham-head .sp-head-list .sanpham-list {
+    margin: 20px;
+    padding: 3px 10px;
+    border: 2px solid var(--hong-tone);
+    border-radius: 7px;
+    font-weight: 500;
+
+}
+
+.sanpham .grids-container {
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr) ;
+    margin: 30px 0;
+    gap: 20px;
+}
+
+.sanpham .grids-container .grid {
+    border: 1px solid var(--xam-nhat);
+    border-radius: 8px;
+}
+
+.sanpham .grids-container .grid .sp-list-item-img .giamgia {
+    justify-content: space-between;
+    display: flex;
+    margin: 5px;
+
+}
+
+.sanpham .grids-container .grid .sp-list-item-img .giamgia p {
+    /* border: 1px solid #333; */
+    padding: 0 5px;
+    border-radius: 8px;
+    background-color: red;
+    color: #fff;
+    margin: 0;
+}
+
+.sanpham .grids-container .grid .sp-list-item-about .sp-item-head {
+    font-weight: 600;
+    margin: 10px;
+
+}
+
+.sanpham .grids-container .grid .sp-list-item-about .sp-item-giatien {
+    color: red;
+    font-weight: 700;
+    font-size: 17px;
+    display: flex;
+    justify-content:space-between;
+    margin: 0 25px;
+    
+}
+.sanpham .grids-container .grid .sp-list-item-about .sp-item-giatien p1{
+      color: var(--xam-chunho);
+      text-decoration: line-through;
+      
+}
+.sanpham .grids-container .grid .sp-list-item-about .sp-item-like{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+.sanpham .grids-container .grid .sp-list-item-about .sp-item-like .star{
+    
+    background: url(./Star\ 1.png) center;
+    background-repeat:no-repeat;
+    width: 15px;
+    height: 15px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    
+    
+    
+    
+    
+}
+
+.sanpham .grids-container .grid .sp-list-item-about .sp-item-muaxem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sanpham .grids-container .grid .sp-list-item-about .sp-item-muaxem-num {
+    margin: 0 5px;
+    font-weight: 600;
+}
+
+.sanpham .grids-container .grid .sp-list-item-about .sp-item-muaxem .cart p::before{
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background-image: url(./shopping_cart.svg);
+    
+}
+
+.sanpham .grids-container .grid .sp-list-item-about .sp-item-muaxem .eye p::before{
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background-image: url(./eye.svg);
+}
+.sanpham .grids-container .grid .sp-list-item-about .sp-item-button .sp-item-button-bd {
+    padding: 5 25;
+    background-color: rgb(255, 0, 0);
+    margin: 10px 10px 15px;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+}
+
+.camnhankh .camnhan .nguoiful{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.camnhankh .camnhan h3{
+    text-align: left;
+    background-color: var(--hong-nhat);
+    width: 300px;
+    font-size: 20px;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    padding-left: 10px;
+}
+
+.camnhankh{
+    margin: 50px 0px;
+}
+.camnhankh .cauhoi h3{
+    text-align: left;
+    background-color: var(--hong-nhat);
+    width: 300px;
+    font-size: 20px;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    padding-left: 10px;
+}
+
+.camnhankh .cauhoi-tieude{
+    display: flex;
+    
+    
+}
+
+.camnhankh .cauhoi-tieude i{
+   background-image: url(./image/dichvuimg/Vector\ 1.png);
+   width: 50px;
+   height: 50px;
+   background-repeat: no-repeat;
+    
+    
+}
+
+.camnhankh .camnhan .camnhan-tieude{
+    display: flex;
+}
+.camnhankh .camnhan .camnhan-tieude i{
+    background-image: url(./image/dichvuimg/Vector\ 1.png);
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+     
+     
+ }
+
+.camnhankh .cauhoi .caccauhoi{
+    text-align: left;
+    
+}
+
+.camnhankh .cauhoi .caccauhoi .caccauhoi-111{
+    text-decoration: none;
+    color: #000000;
+}
+
+.album{
+    text-align: center;
+    color:  var(--mau-den);
+}
+
+
+.album .album-tieude-h{
+    color:  var(--hong-tone);
+    font-size: 30px;
+    font-weight: 700;
+    margin: 25px 0px;
+}
+
+.album .album-tieude-img{
+    margin: 30px 0;
+}
+
+.album .album-tieude-con{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.album .album-tieude-con .album-tieude-con-kh{
+    margin: 20px 20px;
+    border: 1px solid var(--hong-tone);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    
+}
+
+
+.album .grids{
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr );
+    
+    gap : 20px;
+    padding: 20px 0px;
+}
+      /* class img rồi vào trong img */
+.album .grids .img img{
+    width: 100%;
+}
+
+.blog .blog-head{
+    text-align: center;
+    margin: 50px;
+}
+.blog .blog-head .blog-head-h{
+    color: var(--hong-tone);
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px;
+}
+
+.blog .blog-head-img{
+    margin: 30px 0;
+}
+.blog .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20px;
+    
+}
+
+.blog .grid .blog-list-img-tintuc_nd_td_td{
+   font-weight: 700;
+   font-size: 20px;
+   margin: 10px 0px 0px;
+    
+}
+
+.footer .footer-nd{
+    font-weight: 700;
+    margin: 50px 0px;
+}
+
+.footer .item-td{
+    margin: 40px 0px;
+    color: var(--hong-tone);
+    font-size: 20px;
+}
+
+.footer .item-nd p{
+    margin: 10px 0px;
+    
+}
+
+footer .footer-bottom{
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+    background-color: var(--hong-nhat);
+    padding: 7px 0;
+
+}
+
+footer .chinhsach .item-nd p::before{
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: #000000;
+    margin-bottom: 2px;
+}
+
+
+
+
