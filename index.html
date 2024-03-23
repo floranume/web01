@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="media.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
 
@@ -30,10 +32,10 @@
     -->
                 <div class="container">
                     <div class="row">
-                        <div class="logo col-3">
+                        <div class="logo item-h col-3">
                             <img src="image/LOGO.png" alt="">
                         </div>
-                        <div class="itemCha col-6">
+                        <div class="itemCha item-h col-6">
                             <!-- 3 cái item là 3 div class item, vì nó giống nhau -->
                             <div class="itemCon">
                                 <div class="image">
@@ -65,11 +67,11 @@
                             </div>
                             <!-- 3 cái -->
                         </div>
-                        <div class="datLich col-2">
+                        <div class="datLich item-h col-2">
                             <a href="" class="btn btn-datLich" data-bs-toggle="modal" data-bs-target="#modalDatLich">Đặt
                                 lịch</a>
                         </div>
-                        <div class="search col-1">
+                        <div class="search item-h col-1">
                             <div class="iconSearch">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-search" viewBox="0 0 16 16">
@@ -122,6 +124,7 @@
                     </div>
                 </div>
             </div>
+            <div class="navbar-mobile"></div>
             <div class="navbar">
                 <!-- Tới menu  -->
                 <!-- Em thử làm coi, nãy bảo coi phần này rồi đúng không? :) -->
@@ -158,7 +161,20 @@
             </div>
             </div>
         </div>
-     <div class="hederMobile">
+        <div class="headerMobile">
+            <nav class="nav-mobile">
+                <div class="menu-mb item-mb">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                      </svg>
+                </div>
+                <div class="logo-mb item-mb LG">LOGO</div>
+                <div class="src-mb item-mb">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                      </svg>
+                </div>
+            </nav>
 
      </div>
     </header>
@@ -185,7 +201,7 @@
             </div>
             <div class="About-con">
                 <div class="row">
-                    <div class="AnTam itemcon col-3 col-xs-6">
+                    <div class="AnTam itemcon col-md-3 col-xs-6">
                         <div class="image">
                             <img src="./image/shield (1) 1.png" alt="" class="itemcon-img">
                         </div>
@@ -195,7 +211,7 @@
                                 tempor incididunt ut labore et dolore magna aliqua</p>
                         </div>
                     </div>
-                    <div class="AnToan-HieuQua itemcon col-3  col-sm-6">
+                    <div class="AnToan-HieuQua itemcon col-md-3 col-xs-6">
                         <div class="image">
                             <img src="./image/safe 1.png" alt="" class="itemcon-img">
                         </div>
@@ -205,7 +221,7 @@
                                 tempor incididunt ut labore et dolore magna aliqua</p>
                         </div>
                     </div>
-                    <div class="ChuyenNgiep itemcon col-3 col-sm-6">
+                    <div class="ChuyenNgiep itemcon col-md-3 col-xs-6">
                         <div class="image">
                             <img src="./image/businessman 1.png" alt="" class="itemcon-img">
                         </div>
@@ -215,7 +231,7 @@
                                 tempor incididunt ut labore et dolore magna aliqua</p>
                         </div>
                     </div>
-                    <div class="TinCay itemcon col-3 col-xs-6s">
+                    <div class="TinCay itemcon col-md-3 col-xs-6 col-xs-6">
                         <div class="image">
                             <img src="./image/trust 1.png" alt="" class="itemcon-img">
                         </div>
@@ -243,19 +259,19 @@
             </div>
             <div class="DichVu-con">
                 <div class="row">
-                    <div class="list-item itemcon col-4">
+                    <div class="list-item itemcon col-md-4 col-xs-12">
                         <div class="nd-tren image">
                             <img src="./image/dichvuimg/Rectangle 2.png" alt="">
                         </div>
                         <p class="nd-duoi">DỊCH VỤ CHO BÉ</p>
                     </div>
-                    <div class="list-item itemcon col-4">
+                    <div class="list-item itemcon col-md-4 col-xs-12">
                         <div class="nd-tren image">
                             <img src="./image/dichvuimg/Rectangle 2 (1).png" alt="">
                         </div>
                         <p class="nd-duoi">DỊCH VỤ CHO MẸ BẦU</p>
                     </div>
-                    <div class="list-item itemcon col-4">
+                    <div class="list-item itemcon col-md-4 col-xs-12">
                         <div class="nd-tren image">
                             <img src="./image/dichvuimg/Rectangle 2 (2).png" alt="">
                         </div>
@@ -270,8 +286,8 @@
             <!-- 1 row -->
             <div class="nhanvien__dangky row">
                 <!-- cột col  -->
-                <div class="nhanvienDV1 col-7">
-                    <div class="ketoan">
+                <div class="nhanvienDV1 col-md-7 col-xs-12">
+                    <div class="ketoan kt">
                         <div class="img">
                             <img src="./image/dichvuimg/Rectangle 21.png" alt="">
                             <div class="ten_nv">
@@ -283,7 +299,7 @@
                             ultrices purus vel egestas. Phasellus elementum urna imperdiet erat aliquet sollicitudin. In
                             hac habitasse platea dictumst. </p>
                     </div>
-                    <div class="ketoan">
+                    <div class="ketoan kt">
                         <div class="img">
                             <img src="./image/dichvuimg/Rectangle 21.png" alt="">
                             <div class="ten_nv">
@@ -321,7 +337,7 @@
                     </div>
                 </div>
                 <!-- cột col  -->
-                <div class="sign col-5">
+                <div class="sign col-md-5 col-xs-12">
                     <div class="sign-box">
                         <form class="sign-up">
                             <div class="form-item">
@@ -366,8 +382,8 @@
                     <p class="sanpham-list">Dụng cụ</p>
                 </div>
             </div>
-            <div class="sanpham-ds grids-container">
-                <div class="sp-list-item grid">
+            <div class="sanpham-ds grids-container ">
+                <div class="sp-list-item grid ">
                     <div class="sp-list-item-img">
                         <div class="giamgia">
                             <p>-10%</p>
@@ -728,151 +744,151 @@
                     </div>
                 </div>
             </div>
-            <div class="camnhankh">
-                <div class="container">
-                    <div class="row" style="lign-items: start !important;">
-                        <div class="cauhoi col-6">
-                            <span class="cauhoi-tieude">
+        </div>
+    </div>
+    <div class="camnhankh">
+        <div class="container">
+            <div class="row" style="lign-items: start !important;">
+                <div class="cauhoi col-md-6 col-xs-12 tas">
+                    <span class="cauhoi-tieude">
 
-                                <h3>CÂU HỎI THƯỜNG GẶP</h3>
-                                <i></i>
-                            </span>
-                            <div class="caccauhoi">
-                                <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-1" role="button"
-                                    aria-expanded="false" aria-controls="cauHoi-1">
-                                    Lưu ý khi mua hàng ở cửa hàng như thế nào ?
-                                </a>
-                                <div class="collapse" id="cauHoi-1">
-                                    <div class="card card-body">
-                                        Khong biet
-                                    </div>
-                                </div>
-                                <p>
-
-                                    <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-2" role="button"
-                                        aria-expanded="false" aria-controls="cauHoi-1">
-                                        Cửa hàng có những dịch vụ nào, có phụ thu không ?
-                                    </a>
-                                <div class="collapse" id="cauHoi-2">
-                                    <div class="card card-body">
-                                        Khong biet
-                                    </div>
-                                </div>
-                                </p>
-
-                                <p>
-
-                                    <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-3" role="button"
-                                        aria-expanded="false" aria-controls="cauHoi-1">
-                                        Lưu ý khi mua hàng ở cửa hàng như thế nào ?
-                                    </a>
-                                <div class="collapse" id="cauHoi-3">
-                                    <div class="card card-body">
-                                        Khong biet
-                                    </div>
-                                </div>
-                                </p>
-
-                                <p>
-
-                                    <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-4" role="button"
-                                        aria-expanded="false" aria-controls="cauHoi-1">
-                                        Cửa hàng có những dịch vụ nào ?
-                                    </a>
-                                <div class="collapse" id="cauHoi-4">
-                                    <div class="card card-body">
-                                        Khong biet
-                                    </div>
-                                </div>
-                                </p>
-
-                                <p>
-
-                                    <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-5" role="button"
-                                        aria-expanded="false" aria-controls="cauHoi-1">
-                                        Lưu ý khi mua hàng ở cửa hàng như thế nào ?
-                                    </a>
-                                <div class="collapse" id="cauHoi-5">
-                                    <div class="card card-body">
-                                        Khong biet
-                                    </div>
-                                </div>
-                                </p>
-
-                                <p>
-
-                                    <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-6" role="button"
-                                        aria-expanded="false" aria-controls="cauHoi-1">
-                                        tai sao duyen lai khoc
-                                    </a>
-                                <div class="collapse" id="cauHoi-6">
-                                    <div class="card card-body">
-                                        boi vi bi thang quang danh
-                                    </div>
-                                </div>
-                                </p>
-
-                                <p>
-
-                                    <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-7" role="button"
-                                        aria-expanded="false" aria-controls="cauHoi-1">
-                                        Cửa hàng có những dịch vụ nào ?
-                                    </a>
-                                <div class="collapse" id="cauHoi-7">
-                                    <div class="card card-body">
-                                        toi lam gi biet di hoi nguoi khac dum cai
-                                    </div>
-                                </div>
-                                </p>
-
-
-
-
-
-
-                                <!--  -->
-
-
-
+                        <h3>CÂU HỎI THƯỜNG GẶP</h3>
+                        <i></i>
+                    </span>
+                    <div class="caccauhoi">
+                        <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-1" role="button"
+                            aria-expanded="false" aria-controls="cauHoi-1">
+                            Lưu ý khi mua hàng ở cửa hàng như thế nào ?
+                        </a>
+                        <div class="collapse" id="cauHoi-1">
+                            <div class="card card-body">
+                                Khong biet
                             </div>
                         </div>
-                        <div class="camnhan col-6">
-                            <span class="camnhan-tieude">
+                        <p>
 
-                                <H3>CẢM NHẬN KHÁCH HÀNG</H3>
-                                <i></i>
-                            </span>
-                            <div class="nguoifull row">
-                                <!-- Không có row sao chia cột được -->
-                                <div class="nguoi col-6">
-                                    <div class="nguoi-img">
-                                        <img src="./image/anhsanpham/Ellipse 5.png" alt="">
-                                    </div>
-                                    <div class="nguoi-ten">
-                                        <p>Quan Nguyen</p>
-                                    </div>
-                                    <div class="nguoi-gioithieu">
+                            <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-2" role="button"
+                                aria-expanded="false" aria-controls="cauHoi-1">
+                                Cửa hàng có những dịch vụ nào, có phụ thu không ?
+                            </a>
+                        <div class="collapse" id="cauHoi-2">
+                            <div class="card card-body">
+                                Khong biet
+                            </div>
+                        </div>
+                        </p>
 
-                                        <p class="item-kh">Lorem Ipsum has been the industry's standard dummy text ever
-                                            since the 1500s, when an unknown printer took a galley of type and scrambled
-                                            specimen book.</p>
-                                    </div>
+                        <p>
 
-                                </div>
-                                <div class="nguoi col-6">
-                                    <div class="nguoi-img">
-                                        <img src="./image/anhsanpham/Ellipse 5.png" alt="">
-                                    </div>
-                                    <div class="nguoi-ten">
-                                        <p>Quan Nguyen</p>
-                                    </div>
-                                    <div class="nguoi-gioithieu">
+                            <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-3" role="button"
+                                aria-expanded="false" aria-controls="cauHoi-1">
+                                Lưu ý khi mua hàng ở cửa hàng như thế nào ?
+                            </a>
+                        <div class="collapse" id="cauHoi-3">
+                            <div class="card card-body">
+                                Khong biet
+                            </div>
+                        </div>
+                        </p>
 
-                                        <p class="item-kh">Lorem Ipsum has been the industry's standard dummy text ever
-                                            since the 1500s, when an unknown printer took a galley of type and scrambled
-                                            specimen book.</p>
-                                    </div>
-                                </div>
+                        <p>
+
+                            <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-4" role="button"
+                                aria-expanded="false" aria-controls="cauHoi-1">
+                                Cửa hàng có những dịch vụ nào ?
+                            </a>
+                        <div class="collapse" id="cauHoi-4">
+                            <div class="card card-body">
+                                Khong biet
+                            </div>
+                        </div>
+                        </p>
+
+                        <p>
+
+                            <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-5" role="button"
+                                aria-expanded="false" aria-controls="cauHoi-1">
+                                Lưu ý khi mua hàng ở cửa hàng như thế nào ?
+                            </a>
+                        <div class="collapse" id="cauHoi-5">
+                            <div class="card card-body">
+                                Khong biet
+                            </div>
+                        </div>
+                        </p>
+
+                        <p>
+
+                            <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-6" role="button"
+                                aria-expanded="false" aria-controls="cauHoi-1">
+                                tai sao duyen lai khoc
+                            </a>
+                        <div class="collapse" id="cauHoi-6">
+                            <div class="card card-body">
+                                boi vi bi thang quang danh
+                            </div>
+                        </div>
+                        </p>
+
+                        <p>
+
+                            <a class="caccauhoi-111" data-bs-toggle="collapse" href="#cauHoi-7" role="button"
+                                aria-expanded="false" aria-controls="cauHoi-1">
+                                Cửa hàng có những dịch vụ nào ?
+                            </a>
+                        <div class="collapse" id="cauHoi-7">
+                            <div class="card card-body">
+                                toi lam gi biet di hoi nguoi khac dum cai
+                            </div>
+                        </div>
+                        </p>
+
+
+
+
+
+
+                        <!--  -->
+
+
+
+                    </div>
+                </div>
+                <div class="camnhan col-md-6 col-xs-12 tas">
+                    <span class="camnhan-tieude">
+
+                        <H3>CẢM NHẬN KHÁCH HÀNG</H3>
+                        <i></i>
+                    </span>
+                    <div class="nguoifull row">
+                        <!-- Không có row sao chia cột được -->
+                        <div class="nguoi con1 col-md-6 col-xs-12">
+                            <div class="nguoi-img">
+                                <img src="./image/anhsanpham/Ellipse 5.png" alt="">
+                            </div>
+                            <div class="nguoi-ten">
+                                <p>Quan Nguyen</p>
+                            </div>
+                            <div class="nguoi-gioithieu">
+
+                                <p class="item-kh">Lorem Ipsum has been the industry's standard dummy text ever
+                                    since the 1500s, when an unknown printer took a galley of type and scrambled
+                                    specimen book.</p>
+                            </div>
+
+                        </div>
+                        <div class="nguoi con2 col-md-6 col-xs-12">
+                            <div class="nguoi-img">
+                                <img src="./image/anhsanpham/Ellipse 5.png" alt="">
+                            </div>
+                            <div class="nguoi-ten">
+                                <p>Quan Nguyen</p>
+                            </div>
+                            <div class="nguoi-gioithieu">
+
+                                <p class="item-kh">Lorem Ipsum has been the industry's standard dummy text ever
+                                    since the 1500s, when an unknown printer took a galley of type and scrambled
+                                    specimen book.</p>
                             </div>
                         </div>
                     </div>
@@ -1005,7 +1021,7 @@
         <div class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="footer-nd col-3">
+                    <div class="footer-nd col-md-3 col-xs-12">
                         <div class="mevabe">
                             <div class="mevabe-td item-td">MẸ VÀ BÉ THÀNH TÂM</div>
                             <div class="mevabe-nd item-nd">
@@ -1023,7 +1039,7 @@
                         </div>
     
                     </div>
-                    <div class="footer-nd col-3">
+                    <div class="footer-nd col-md-3 col-xs-12">
                         <div class="chinhsach">
                             <div class="chinhsach-td item-td">CHÍNH SÁCH</div>
                             <div class="chinhsach-nd item-nd">
@@ -1034,7 +1050,7 @@
                         </div>
     
                     </div>
-                    <div class="footer-nd col-3">
+                    <div class="footer-nd col-md-3 col-xs-12">
                         <div class="map">
                             <div class="bando item-td">BẢN ĐỒ</div>
                             <div class="bando-img">
@@ -1043,7 +1059,7 @@
                         </div>
     
                     </div>
-                    <div class="footer-nd col-3">
+                    <div class="footer-nd col-md-3 col-xs-12">
                         <div class="fanpage ">
                             <div class="fanpage-td item-td">FANPAGE</div>
                             <div class="fanpage-img">
