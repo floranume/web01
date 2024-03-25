@@ -479,7 +479,7 @@ thử xem
     gap: 20px;
 } */
 .sanpham .sanpham-ds .sp-list-item {
-    margin: 0 20px;
+    margin: 0 7px;
     border: 1px solid var(--bo-vien);
     border-radius: 10px;
 
