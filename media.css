@@ -1,0 +1,123 @@
+@media (max-width: 575.98px) {
+    header .headerDesktop {
+        display: none;
+    }
+
+    header .headerMobile {
+
+        background-color: var(--hong-tone);
+
+        height: 58px;
+    }
+
+    header .headerMobile .nav-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    header .headerMobile .nav-mobile .item-mb {
+        margin: 15px 0;
+        height: auto;
+        width: 40px;
+        color: aliceblue;
+    }
+
+    header .headerMobile .nav-mobile .LG {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    header .headerMobile .nav-mobile .item-mb .fa-solid {
+        margin: 0 10px;
+
+    }
+
+    header .headerMobile .nav-mobile .item-mb .fa-solid:hover {
+        color: aqua;
+    }
+
+    header .navbar {
+        height: 50px;
+        background-color: var(--hong-tone);
+    }
+
+    .sanpham .grids-container {
+        grid-template-columns: repeat(2, calc(50% - 5px));
+        gap: 10px;
+    }
+
+    .sanpham .sp-list-item-img {
+        width: 100%;
+    }
+
+    .sanpham .grids-container .grid .sp-list-item-about .sp-item-giatien,
+    .sanpham .grids-container .grid .sp-list-item-about .sp-item-muaxem {
+        display: unset;
+        margin: 0;
+    }
+
+
+
+    .camnhankh .nguoifull .nguoi {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .album .grids {
+
+        grid-template-columns: repeat(2, 1fr) !important;
+        /* tại mình chỉ sửa cái này thôi     */
+    }
+
+    .camnhankh .cauhoi .caccauhoi {
+        margin-right: 20px;
+        font-size: 14px;
+    }
+
+    .camnhankh .nguoifull .con2 {
+        display: none !important;
+    }
+
+    .About .itemcon {
+        margin: 30px 0;
+    }
+
+    .nhanvien .sign {
+        margin: 30px 0;
+    }
+
+    .nhanvien .kt {
+        display: none;
+    }
+
+
+
+    footer .chinhsach .item-nd-a p::before {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50px;
+        background-color: #000000;
+        margin-right: 10px;
+
+
+    }
+
+    footer .footer .img img {
+        width: 75%;
+    }
+
+    footer .footer-bottom {
+        text-align: center;
+        font-weight: 500;
+        font-size: 15px;
+        background-color: var(--hong-nhat);
+        padding: 17px 0;
+    }
+
+
+
+}
