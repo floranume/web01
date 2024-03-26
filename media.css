@@ -3,6 +3,8 @@
         display: none;
     }
 
+
+
     header .headerMobile {
 
         background-color: var(--hong-tone);
@@ -92,7 +94,11 @@
         display: none;
     }
 
-
+    footer .chinhsach .item-nd-a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     footer .chinhsach .item-nd-a p::before {
         content: "";

@@ -842,7 +842,10 @@ header .nav-mobile {
 
 footer {
     background-color: #F0F0F0;
+
 }
+
+
 
 .footer .footer-nd {
     font-weight: 700;
@@ -881,9 +884,12 @@ footer .chinhsach .item-nd p::before {
     height: 5px;
     border-radius: 50px;
     background-color: #000000;
-    margin-right: 10px;
-    margin-bottom: 3px;
+    margin: 0 10px 5px 0
+}
 
+footer .chinhsach .item-nd {
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -904,4 +910,66 @@ footer .mevabe .item-nd .bi {
 
 .sanpham .sanpham-ds {
     margin: 0 15px;
+}
+
+.rollbar {
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    z-index: 20;
+}
+
+.rollbar ul {
+    width: 40px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rollbar li {
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 30px;
+
+
+
+}
+
+.rollbar i {
+    font-size: 30px;
+}
+
+.rollbar li h6 {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    opacity: 0;
+    transition-delay: 0.4s;
+    background-color: var(--xam-nhat);
+    padding: 4px 8px;
+    border-radius: 17px;
+}
+
+.rollbar a {
+
+    line-height: normal;
+
+}
+
+.rollbar .fa-youtube {
+    color: #CD1877;
+}
+
+.rollbar li h6:hover {
+    transition: ease-in;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    right: 40px;
+    cursor: default;
+}
+
+.rollbar li a:hover {
+    cursor: default;
 }
